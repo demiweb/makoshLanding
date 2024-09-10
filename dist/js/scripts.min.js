@@ -69,6 +69,26 @@ $(".single-rule__head").click(function () {
 
 //rules open
 
+$(".tel-ic").click(function () {
+    $(this).closest('.tel-block').toggleClass('open');
+});
+//scroll progress
+function progressBarScrollFull() {
+    if (document.querySelector(".full-progress p")) {
+        let winScroll = document.body.scrollTop || document.documentElement.scrollTop,
+            height = document.documentElement.scrollHeight - document.documentElement.clientHeight,
+            scrolled = (winScroll / height) * 100;
+        document.querySelector(".full-progress p").style.width = scrolled + "%";
+    }
+
+}
+
+window.onscroll = function () {
+    progressBarScrollFull()
+};
+
+progressBarScrollFull();
+//scroll progress
 //input range control
 
 const valueR = document.querySelector(".input-range output");

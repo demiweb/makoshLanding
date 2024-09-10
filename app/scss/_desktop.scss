@@ -14,6 +14,21 @@ body {
   margin: 0 auto;
 }
 
+.full-progress {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 10px;
+  z-index: 200;
+
+  p {
+    height: 100%;
+    display: flex;
+    background: $main-color;
+  }
+}
+
 .header {
   width: 100%;
   position: fixed;
@@ -37,8 +52,24 @@ body {
   &.header-fixed {
     &::before {
       height: 100%;
-      border-radius: 0 0 30px 30px;
-      opacity: 0.8;
+      border-radius: 0;
+      opacity: 1;
+      background: #fff;
+    }
+
+    .logo {
+      width: 200px;
+      filter: brightness(1);
+      padding-top: 18px;
+      padding-bottom: 13px;
+    }
+
+    .tel {
+      color: #000;
+
+      &:hover {
+        color: $main-color;
+      }
     }
   }
 
@@ -57,18 +88,9 @@ body {
 
     padding: 39px 0;
     position: relative;
+    transition: all 0.3s ease-out;
+    filter: brightness(100);
 
-    &::before {
-      width: 50vw;
-      right: 0;
-      top: 0;
-      height: 10px;
-      background: $main-color;
-      display: inline-block;
-      content: '';
-      position: absolute;
-      z-index: 1;
-    }
 
     a, img {
       width: 100%;
@@ -372,6 +394,10 @@ body {
   }
 }
 
+.tel-ic {
+  display: none;
+}
+
 .avail-btn {
   width: 100%;
   border-radius: 30px;
@@ -385,6 +411,7 @@ body {
   margin-top: 30px;
   padding: 50px 40px;
   flex-grow: 1;
+  transition: all 0.3s ease-out;
 
   span {
     font-family: $second-font;
@@ -392,12 +419,23 @@ body {
     font-weight: bold;
     color: #fff;
     text-align: center;
+    transition: all 0.3s ease-out;
   }
 
   p {
     color: #fff;
     text-align: center;
     max-width: 420px;
+    transition: all 0.3s ease-out;
+  }
+
+  &:hover {
+    background: #fff;
+    color: $main-color;
+
+    span, p {
+      color: $main-color;
+    }
   }
 }
 
@@ -1435,7 +1473,6 @@ body {
     gap: 30px;
 
 
-
     .btn {
       .btn-txt {
         padding: 15px 178px;
@@ -1445,10 +1482,30 @@ body {
 
   &-bot {
     width: 100%;
-    padding: 30px 0;
+    padding: 30px 0 17px;
     border-top: 1px solid #4C4C4C;
+
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
     p {
-      text-align: center;
+      width: auto;
+      text-align: left;
+      margin-bottom: auto;
+    }
+
+    a {
+      width: 118px;
+      height: auto;
+      display: flex;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
     }
   }
 
@@ -1461,6 +1518,7 @@ body {
     align-items: center;
     justify-content: center;
   }
+
   .footer-text {
     p {
       display: inline-block;

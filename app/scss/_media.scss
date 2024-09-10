@@ -18,15 +18,19 @@
     padding: 0 vw(30px);
     max-width: 100%;
   }
+  .full-progress {
+    height: vw(10px);
+  }
   .header {
     &::before {
       height: vw(10px);
     }
 
     &.header-fixed {
-      &::before {
-        border-radius: 0 0 vw(30px) vw(30px);
-      }
+     .logo {
+       width: vw(200px);
+       padding: vw(18px) 0 vw(13px);
+     }
     }
 
     .logo {
@@ -297,7 +301,7 @@
     }
   }
   .benefits {
-    padding: vw(50px);
+    padding: vw(50px) 0;
 
     &-cont {
       .subtitle {
@@ -417,7 +421,7 @@
     }
   }
   .deposit {
-    padding: vw(60px) vw(30px);
+    padding: vw(60px) 0 vw(30px);
     gap: vw(30px);
     border-radius: vw(30px);
 
@@ -525,6 +529,7 @@
     //15px
     width: calc(50% - 0.9375vw);
     border-radius: vw(30px);
+
   }
   .demands-block {
     padding: vw(30px);
@@ -579,6 +584,9 @@
 
     &-bot {
       padding: vw(30px) 0;
+      a {
+        width: vw(118px);
+      }
     }
 
     p {
