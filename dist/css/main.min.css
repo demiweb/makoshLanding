@@ -3687,7 +3687,7 @@ body {
     padding: 0.9375vw 11.125vw;
   }
   .footer-bot {
-    padding: 1.875vw 0;
+    padding: 1.875vw 0 1.0625vw;
   }
   .footer-bot a {
     width: 7.375vw;
